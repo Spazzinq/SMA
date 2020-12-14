@@ -1,0 +1,29 @@
+<script>
+    function toggleBar(x) {
+        x.classList.toggle("toggled");
+        document.getElementsByTagName("nav")[0].classList.toggle("toggled");
+    }
+</script>
+<grid-item class="logo">
+    <a href="https://sma.spazzinq.org"><img src="resources/icon.png" alt="Spazzinq logo"></a>
+</grid-item>
+<grid-item>
+    <div onclick="toggleBar(this)">
+        <div class="bar-top"></div>
+        <div class="bar-mid"></div>
+        <div class="bar-bottom"></div>
+    </div>
+    <nav>
+        <ul>
+            <li>
+                <a class="highlight" href="https://sma.spazzinq.org/#learn">Learn</a>
+            </li>
+            <li>
+                <a class="highlight" href="https://sma.spazzinq.org/#recognize">Recognize</a>
+            </li>
+            <li>
+                <a class="highlight" href="https://sma.spazzinq.org/#help">Help</a>
+            </li>
+        </ul>
+    </nav>
+</grid-item>
