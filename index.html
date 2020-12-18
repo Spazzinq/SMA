@@ -77,9 +77,51 @@ According to Pierre Berthon, Professor of Information Design at Bentley Universi
         <h1>RECOGNIZE IT</h1>
     </div>
     <div class="text-section">
-        <div class="main-line">
-            <span class="lead-in">This section (the whole site too) is a draft. </span><span class="mini-in">Rest assured, it will be finished soon.</span>
-        </div>
+        <span class="lead-in">If you answer "yes" to 3+ of these questions you <a class="highlight" href="https://www.addictioncenter.com/drugs/social-media-addiction/">might have an addiction</a>.</span><br><br>
+        
+        <script>
+            function countYes() {
+                var countYes = 0;
+                var countNo = 0;
+                for (var i = 1; i < 7; i++) {
+                    if (document.getElementsByName(i.toString())[0].checked) countYes++;
+                    if (document.getElementsByName(i.toString())[1].checked) countNo++;
+                }
+                
+        if (countYes > 3) {
+            document.getElementById("ans").innerHTML = "<a class=\"highlight\" href=\"https://www.addictioncenter.com/drugs/social-media-addiction/\">According to AddictionCenter</a>, you may have an addiction to social media or be developing one.";
+        } else if (countYes + countNo != 6) {
+            document.getElementById("ans").innerHTML = "You haven't answered all the questions!";
+        } else {
+            document.getElementById("ans").innerHTML = "<a class=\"highlight\" href=\"https://www.addictioncenter.com/drugs/social-media-addiction/\">According to AddictionCenter</a>, you probably don't have an addiction to social media.";
+        }
+            }
+        </script>
+        <p onclick="countYes()">1. Do you spend a lot of time thinking about social media or planning to use social media?<br>
+            <input type="radio" name="1" value="true">Yes<br>
+            <input type="radio" name="1" value="false">No<br>
+        </p>
+        <p onclick="countYes()">2. Do you feel urges to use social media more and more?<br>
+            <input type="radio" name="2" value="true">Yes<br>
+            <input type="radio" name="2" value="false">No<br>
+        </p>
+        <p onclick="countYes()">3. Do you use social media to forget about personal problems?<br>
+            <input type="radio" name="3" value="true">Yes<br>
+            <input type="radio" name="3" value="false">No<br>
+        </p>
+        <p onclick="countYes()">4. Do you often try to reduce your use of social media without success?<br>
+            <input type="radio" name="4" value="true">Yes<br>
+            <input type="radio" name="4" value="false">No<br>
+        </p>
+        <p onclick="countYes()">5. Do you become restless or troubled if unable to use social media?<br>
+            <input type="radio" name="5" value="true">Yes<br>
+            <input type="radio" name="5" value="false">No<br>
+        </p>
+        <p onclick="countYes()">6. Do you use social media so much that it has had a negative impact on your job or studies?<br>
+            <input type="radio" name="6" value="true">Yes<br>
+            <input type="radio" name="6" value="false">No<br>
+        </p><br>
+        <p id="ans">You have not answered any of the questions.</p>
     </div>
     <div class="scroll" id="help">
         <h1>HELP YOURSELF</h1>
