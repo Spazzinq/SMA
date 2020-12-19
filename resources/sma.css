@@ -2,8 +2,7 @@
     --nav-color: #33322e;
     --background-color: #ffefb0;
     --main-color: #ffefb0;
-    --highlight-color: #4d93ff;
-    --light-highlight-color: #4d93ff;
+    --highlight-color: #ffcb00;
     --scroll-color: #ebeb15;
     --error-color: #ff1d00;
     --shadow-color: black;
@@ -53,7 +52,7 @@ grid-item {
 }
 
 h1 {
-    font-size: 50px;
+    font-size: 30px;
     margin: 0;
 }
 
@@ -104,11 +103,11 @@ header img {
     text-shadow: -4px 4px var(--shadow-color);
     text-align: center;
     /*  TODO Remove bottom margin when adding content */
-    margin: 5vh 0 5vh;
+    margin: 3vh 0 3vh;
 }
 
 .scroll h1 {
-    font-size: 7vw;
+    font-size: 5vw;
 }
 
 .error {
@@ -157,10 +156,6 @@ header img {
     margin: 0;
 }
 
-.typed, .typed-cursor {
-    font-size: 30px;
-}
-
 .main img:hover {
     transform: rotate(360deg);
     transition: all 1s cubic-bezier(.4, .53, .28, 1.05);
@@ -176,11 +171,11 @@ header img {
 }
 
 .lead-in {
-    font-size: 6vh;
+    font-size: 4vh;
 }
 
 .mini-in {
-    font-size: 3.2vh;
+    font-size: 2.6vh;
 }
 
 div ul {
@@ -189,17 +184,6 @@ div ul {
 
 div li {
     margin: 0 0 .5vh;
-}
-
-.typed .highlight {
-    color: black;
-    background-image:
-        linear-gradient(var(--light-highlight-color) 30%, transparent 0);
-    
-}
-
-.typed .highlight:hover {
-    background-color: var(--light-highlight-color);
 }
 
 .indent {
@@ -212,8 +196,27 @@ div li {
     margin: 2vh;
 }
 
+.prompt {
+        font-size: 30px;
+    }
+
 h2 {
     margin: 1vh 0;
+}
+
+p {
+    margin: 2vh;
+    font-size: 2vh;
+}
+
+.text-img-grid {
+    display: grid;
+}
+
+.center {
+    display: block;
+    margin: auto 0;
+    font-size: 3vh;
 }
 
 @media screen and (orientation: portrait),(max-width: 1150px) {
@@ -223,8 +226,16 @@ h2 {
 }
 
 @media screen and (orientation: portrait),(min-width: 1250px) {
+    .main {
+        padding: 10vh 0 15vh;
+    }
+    
+    .name {
+        font-size: 9vw;
+    }
+    
     .text-section {
-        padding: 10vh 30vh 10vh;
+        padding: 6vh 30vh 6vh;
     }
 }
 
@@ -265,7 +276,7 @@ h2 {
     
     .name {
         font-size: 15vw;
-        margin: 0 0 20vh;
+        margin: 0 0 18vh;
     }
     
     .scroll h1 {
@@ -292,7 +303,7 @@ h2 {
         margin: 0 0 2vw;
     }
     
-    .typed, .typed-cursor {
+    .prompt {
         font-size: 5vw;
     }
 
@@ -321,6 +332,15 @@ h2 {
     
     ul li, span {
         font-size: 2.9vw;
+    }
+    
+    .text-img-grid {
+        display: block;
+    }
+    
+    .text-img {
+        display: block;
+        margin: auto;
     }
 }
 
